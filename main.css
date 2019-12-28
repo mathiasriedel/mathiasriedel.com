@@ -15,6 +15,7 @@ body, html {
     width: 35px;
     border-top: solid 2px white;
     border-left: solid 2px white;
+    z-index: 900;
 }
 
 .left-arrow {
