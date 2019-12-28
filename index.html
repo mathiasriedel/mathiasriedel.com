@@ -31,7 +31,7 @@
         }
         window.addEventListener("load", function () {
             var images = document.getElementById("photos").getElementsByTagName("img");
-            for (var i = 1; i < images.length; i++) {
+            for (var i = 0; i < images.length; i++) {
                 images[i].addEventListener("click", (e) => {
                     currentImg = e.target.getAttribute("class");
                     document.getElementById("page-overlay").style.display = "block";
