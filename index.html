@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="main.css" rel="stylesheet">
+    <title>mathiasriedelphotography</title>
+    <script>
+        let currentImg;
+        function left() {
+            event.stopPropagation();
+            let nextImg = document.getElementsByClassName(currentImg)[0].previousElementSibling;
+            if (nextImg) {
+                currentImg = nextImg.getAttribute("class");
+            } else {
+                currentImg = "skyline";
+            }
+            document.getElementById("img-overlay").src = "assets//" + currentImg + ".jpg";
+        }
+        function right() {
+            event.stopPropagation();
+            let nextImg = document.getElementsByClassName(currentImg)[0].nextElementSibling;
+            if (nextImg) {
+                currentImg = nextImg.getAttribute("class");
+            } else {
+                currentImg = "fischland";
+            }
+            document.getElementById("img-overlay").src = "assets//" + currentImg + ".jpg";
+        }
+        window.addEventListener("load", function () {
+            var images = document.getElementById("photos").getElementsByTagName("img");
+            for (var i = 1; i < images.length; i++) {
+                images[i].addEventListener("click", (e) => {
+                    currentImg = e.target.getAttribute("class");
+                    document.getElementById("page-overlay").style.display = "block";
+                    document.getElementById("page-overlay").getElementsByTagName("img")[0].src = e.target.src;
+                    document.getElementById("page-overlay").addEventListener("click", function () {
+                        document.getElementById("page-overlay").style.display = "none";
+                    });
+                });
+            }
+            document.onkeydown = checkKey;
+            function checkKey(e) {
+                e = e || window.event;
+                if (e.keyCode == '37') {
+                    left();
+                }
+                else if (e.keyCode == '39') {
+                    right();
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="page-overlay">
+        <div class="close"></div>
+        <div class="left-arrow" onclick="left()"></div>
+        <img src="" oncontextmenu="return false" draggable="false" id="img-overlay">
+        <div class="right-arrow" onclick="right()"></div>
+    </div>
+    <section class="home">
+        <div class="bg"></div>
+        <a class="scroll-down" href="#gallery"></a>
+    </section>
+    <section class="gallery" id="gallery">
+        <h1>GALLERY</h1>
+        <div id="photos">
+            <img src="assets/fischland.jpg" class="fischland" oncontextmenu="return false" draggable="false">
+            <img src="assets/nienhagen.jpg" class="nienhagen" oncontextmenu="return false" draggable="false">
+            <img src="assets/diamondbeach.jpg" class="diamondbeach" oncontextmenu="return false" draggable="false">
+            <img src="assets/rainbow.jpg" class="rainbow" oncontextmenu="return false" draggable="false">
+            <img src="assets/geysir.jpg" class="geysir" oncontextmenu="return false" draggable="false">
+            <img src="assets/niagara1.jpg" class="niagara1" oncontextmenu="return false" draggable="false">
+            <img src="assets/niagara2.jpg" class="niagara2" oncontextmenu="return false" draggable="false">
+            <img src="assets/mooresbrookfall.jpg" class="mooresbrookfall" oncontextmenu="return false"
+                draggable="false">
+            <img src="assets/toronto.jpg" class="toronto" oncontextmenu="return false" draggable="false">
+            <img src="assets/squirrel.jpg" class="squirrel" oncontextmenu="return false" draggable="false">
+            <img src="assets/skogafoss.jpg" class="skogafoss" oncontextmenu="return false" draggable="false">
+            <img src="assets/vik.jpg" class="vik" oncontextmenu="return false" draggable="false">
+            <img src="assets/warnemuende.jpg" class="warnemuende" oncontextmenu="return false" draggable="false">
+            <img src="assets/sunset.jpg" class="sunset" oncontextmenu="return false" draggable="false">
+            <img src="assets/vineyards.jpg" class="vineyards" oncontextmenu="return false" draggable="false">
+            <img src="assets/dachstein.jpg" class="dachstein" oncontextmenu="return false" draggable="false">
+            <img src="assets/madeira-fall.jpg" class="madeira-fall" oncontextmenu="return false" draggable="false">
+            <img src="assets/milkyway.jpg" class="milkyway" oncontextmenu="return false" draggable="false">
+            <img src="assets/langbath.jpg" class="langbath" oncontextmenu="return false" draggable="false">
+            <img src="assets/sunrise.jpg" class="sunrise" oncontextmenu="return false" draggable="false">
+            <img src="assets/schoenbrunn.jpg" class="schoenbrunn" oncontextmenu="return false" draggable="false">
+            <img src="assets/skyline-sunset.jpg" class="skyline-sunset" oncontextmenu="return false" draggable="false">
+            <img src="assets/waterfall.jpg" class="waterfall" oncontextmenu="return false" draggable="false">
+            <img src="assets/madeira-sea.jpg" class="madeira-sea" oncontextmenu="return false" draggable="false">
+            <img src="assets/whitewater.jpg" class="whitewater" oncontextmenu="return false" draggable="false">
+            <img src="assets/skyline.jpg" class="skyline" oncontextmenu="return false" draggable="false">
+        </div>
+    </section>
+    <section class="about">
+        <h1>ABOUT ME</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="assets/portrait.jpg">
+            </div>
+            <div class="about-text">
+                <p>Mathias Riedel (2003) is a hobby photographer based in Vienna, Austria.</p>
+                <p>Specializing in landscape and wildlife photography, he has photographed in his home in Austria as well as
+                    many
+                    other countries, including Germany, Iceland and Canada.
+                </p>
+                <p>For questions or suggestions, please contact <em>mathiasriedel12@gmail.com</em></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        © 2019, Mathias Riedel
+    </footer>
+</body>
+
+</html>
