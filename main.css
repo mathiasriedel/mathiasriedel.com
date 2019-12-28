@@ -311,4 +311,8 @@ footer {
         text-align: center;
         padding: 0;
     }
+
+    #photos {
+        width: 80%;
+    }
 }
