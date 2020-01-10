@@ -291,6 +291,62 @@ footer {
     margin: 100px 0 50px;
 }
 
+.contact {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.contact form {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+.inputs {
+    display: flex;
+    width: 100%;
+}
+
+.contact form input {
+    width: 50%;
+    margin: 10px;
+    height: 30px;
+    padding: 5px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    font-size: 2rem;
+    border: 2px solid white;
+    font-family: monospace;
+}
+
+.contact form textarea {
+    width: 100%;
+    max-width: 566px;
+    display: block;
+    margin: 10px;
+    height: 200px;
+    padding: 5px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    font-size: 2rem;
+    border: 2px solid white;
+}
+
+.contact form button {
+    display: block;
+    margin: 20px 10px;
+    width: 100px;
+    padding: 5px 10px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    font-size: 2rem;
+    border: 2px solid white;
+}
+
+.contact form button:hover {
+    color: darkgrey;
+}
+
 @media only screen and (max-width: 800px) {
     .about-content {
         display: block;
@@ -315,5 +371,9 @@ footer {
 
     #photos {
         width: 80%;
+    }
+
+    .contact form textarea {
+        max-width: 90%;
     }
 }
