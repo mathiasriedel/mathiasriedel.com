@@ -309,7 +309,7 @@ footer {
 
 .contact form input {
     width: 50%;
-    margin: 10px;
+    margin: 10px 0;
     height: 30px;
     padding: 5px;
     background-color: rgb(26, 26, 26);
@@ -320,21 +320,23 @@ footer {
 }
 
 .contact form textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     width: 100%;
-    max-width: 566px;
-    display: block;
-    margin: 10px;
+    margin: 10px 0;
     height: 200px;
     padding: 5px;
     background-color: rgb(26, 26, 26);
     color: white;
     font-size: 2rem;
     border: 2px solid white;
+    resize: none;
 }
 
 .contact form button {
     display: block;
-    margin: 20px 10px;
+    margin: 20px 0;
     width: 100px;
     padding: 5px 10px;
     background-color: rgb(26, 26, 26);
@@ -371,9 +373,5 @@ footer {
 
     #photos {
         width: 80%;
-    }
-
-    .contact form textarea {
-        max-width: 90%;
     }
 }
