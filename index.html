@@ -34,12 +34,10 @@
             for (var i = 0; i < images.length; i++) {
                 images[i].addEventListener("click", (e) => {
                     currentImg = e.target.getAttribute("class");
-                    document.getElementsByTagName("body")[0].style.overflow = "hidden";
                     document.getElementById("page-overlay").style.display = "block";
                     document.getElementById("page-overlay").getElementsByTagName("img")[0].src = e.target.src;
                     document.getElementById("page-overlay").addEventListener("click", function () {
                         document.getElementById("page-overlay").style.display = "none"
-                        document.getElementsByTagName("body")[0].style.overflow = "auto";
                     });
                 });
             }
