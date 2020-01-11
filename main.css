@@ -341,6 +341,7 @@ footer {
     background-color: rgb(26, 26, 26);
     color: white;
     font-size: 2rem;
+    font-family: monospace;
     border: 2px solid white;
 }
 
