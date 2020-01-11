@@ -5,31 +5,30 @@ body, html {
     font-size: 10px;
     background-color: rgb(26, 26, 26);
     color: white;
+    font-family: monospace;
+}
+
+h1 {
     font-family: 'Segoe UI', Verdana, sans-serif;
 }
 
-.left-arrow, .right-arrow {
+#navigation {
     position: absolute;
-    top: 50%;
-    height: 35px;
-    width: 35px;
-    border-top: solid 2px white;
-    border-left: solid 2px white;
-    z-index: 900;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -100px;
+    font-size: 2rem;
+    width: 200px;
+    text-align: center;
 }
 
-.left-arrow {
-    left: 40px;
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+#navigation a {
+    cursor: pointer;
 }
 
-.right-arrow {
-    right: 40px;
-    -ms-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+#navigation a:hover {
+    color: lightgray;
+    text-decoration: underline;
 }
 
 #page-overlay {
@@ -43,12 +42,12 @@ body, html {
   
 #page-overlay img {
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    max-height: 90%;
+    max-height: 80%;
     max-width: 80%;
 }
 
