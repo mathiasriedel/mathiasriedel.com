@@ -12,6 +12,18 @@ h1 {
     font-family: 'Segoe UI', Verdana, sans-serif;
 }
 
+#close {
+    width: 20px;
+    height: 20px;
+    background-image: url("assets/close.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
 #navigation {
     position: absolute;
     bottom: 30px;
