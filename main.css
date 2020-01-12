@@ -229,23 +229,33 @@ img.skyline-sunset {
     grid-column: 1/7;
 }
 
-img.waterfall {
+img.tirol {
     grid-row: 11;
     grid-column: 1/4;
 }
 
-img.madeira-sea {
+img.liesing {
     grid-row: 11;
     grid-column: 4/7;
 }
 
-img.whitewater {
+img.waterfall {
     grid-row: 12;
     grid-column: 1/4;
 }
 
-img.skyline {
+img.madeira-sea {
     grid-row: 12;
+    grid-column: 4/7;
+}
+
+img.whitewater {
+    grid-row: 13;
+    grid-column: 1/4;
+}
+
+img.skyline {
+    grid-row: 13;
     grid-column: 4/7;
 }
 
